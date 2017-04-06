@@ -10,6 +10,7 @@
 - Delete all todos (`DELETE /restful-todo/api/todos/delete`)
 
 
+
 Tested on Tomcat 8.0.17. It's a simple maven project, just clone the project, build and deploy it.
 
 You can use this command to build war package
@@ -23,7 +24,7 @@ Then use the this output war file to deploy
 target/restful-todo-0.1.war 
 ```
 
- After you deploy application, you can do a quick test by using followings curl commands
+ After you deploy the application, you can do a quick test by using followings curl commands
 
 ```
 
