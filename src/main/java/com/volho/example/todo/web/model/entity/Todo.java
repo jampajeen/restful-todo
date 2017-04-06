@@ -44,15 +44,15 @@ public class Todo {
     @Column(name = "id")
     private Long id;
     
-    private String title;
+    private String subject;
     
-    private String description;
+    private String detail;
     
     @JsonDeserialize(using = CustomDateDeserializer.class)
     @JsonSerialize(using = CustomDateSerializer.class)
     private Date targetdatetime;
     
-    private Boolean done; 
+    private String status;
 
     public Long getId() {
         return id;
@@ -62,20 +62,20 @@ public class Todo {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     public Date getTargetdatetime() {
@@ -86,11 +86,12 @@ public class Todo {
         this.targetdatetime = targetdatetime;
     }
 
-    public Boolean getDone() {
-        return done;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDone(Boolean done) {
-        this.done = done;
+    public void setStatus(String status) {
+        this.status = status;
     }
+    
 }

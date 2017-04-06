@@ -2,8 +2,8 @@
 drop table if exists todos;
 CREATE TABLE todos (
     id bigint NOT NULL PRIMARY KEY auto_increment,
-    title  VARCHAR(50),
-    description VARCHAR(255),
+    subject  VARCHAR(50),
+    detail VARCHAR(255),
     targetdatetime DATETIME,
-    done tinyint(1)
+    status  VARCHAR(8)
 );

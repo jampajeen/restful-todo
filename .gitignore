@@ -1,0 +1,23 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+/target/
+.DS_Store
+nb-configuration.xml
+/jsf-primefaces/target/
+/spring-mvc/target/
+/jpa-hibernate-jsf/target/
+/JEE8-MVC-1.0/target/
+/jsp-servlet/target/
+/jax-ws-service/target/
+/jax-rs/target/

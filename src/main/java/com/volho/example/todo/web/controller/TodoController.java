@@ -80,6 +80,25 @@ public class TodoController {
         return response;
     }
     
+    @RequestMapping(value = "/todos/{id}/status", method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
+    @ResponseBody
+    public ApiResponse setStatusById(@PathVariable Long id, @RequestBody Todo todo) throws Exception {
+        
+        ApiResponse response = new ApiResponse();
+        try {
+            Todo item = todoService.setStatus(id, todo.getStatus());
+            response.setData(item);
+            response.setSuccess(true);
+            response.setMessage("Update item status successfully");
+            
+        } catch(Exception e) {
+            response.setSuccess(false);
+            response.setMessage("Error occur, cannot update status of an item id = " + id);
+        }
+        
+        return response;
+    }
+    
     @RequestMapping(value = "/todos/delete", method = RequestMethod.DELETE, produces = "application/json", consumes = "application/json")
     @ResponseBody
     public ApiResponse deleteAll() throws Exception {

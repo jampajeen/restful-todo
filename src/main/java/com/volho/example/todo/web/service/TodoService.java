@@ -15,6 +15,7 @@
  */
 package com.volho.example.todo.web.service;
 
+import com.volho.example.todo.web.model.api.StatusEnum;
 import com.volho.example.todo.web.model.entity.Todo;
 import com.volho.example.todo.web.repository.TodoRepository;
 import java.util.List;
@@ -53,15 +54,26 @@ public class TodoService {
         return todoRepository.save(todo);
     }
     
+    public Todo setStatus(Long id, String status) throws Exception {
+        Todo found = null;
+        if( (!StatusEnum.PENDING.value().equals(status) && !StatusEnum.DONE.value().equals(status)) || (found = todoRepository.findOne(id) ) == null ) {
+            throw new Exception();
+        }
+        
+        found.setStatus(status);
+        return todoRepository.save(found);
+    }
+    
     public List<Todo> findTodo() throws Exception {
         return todoRepository.findAll();
     }
     
     public Todo findTodo(Long id) throws Exception {
-        if(todoRepository.findOne(id) == null ) {
+        Todo found = null;
+        if( (found = todoRepository.findOne(id) ) == null ) {
             throw new Exception();
         }
-        return todoRepository.findOne(id);
+        return found;
     }
     
 }
