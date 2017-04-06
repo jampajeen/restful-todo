@@ -279,9 +279,6 @@ Parameters
 =================   =================   ==================
 Param               Type                Description
 =================   =================   ==================
-subject             String              Subject
-detail              String              Text or detail
-targetdatetime      Datetime            Target datetime in format ``yyyy-MM-dd HH:mm:ss``
 status              String              Status of todo ``pending`` or ``done``
 =================   =================   ==================
 
