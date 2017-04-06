@@ -2,7 +2,7 @@
 API Reference
 ========================
 
-This is an API documentation example. The REST API lives at the ``/restful-todo/api/`` endpoint that depends on your application server configuration, for example http://localhost:8080/restful-todo/api/ 
+This is an API documentation. The REST API lives at the ``/restful-todo/api/`` endpoint which depends on your application server configuration, for example http://localhost:8080/restful-todo/api/ 
 
 This API requires no authentication.
 
@@ -12,7 +12,7 @@ Common Request/Response
 Request
 ~~~~~~~~~~~~~~~
 
-The request parameters of each service operation are different. (You can see how to use it in Service Operation section) 
+The request parameters of each service operation are different. (You can see how to use them in `Service Operation section`) 
 
 Response
 ~~~~~~~~~~~~~~~
