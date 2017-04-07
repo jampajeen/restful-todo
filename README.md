@@ -18,7 +18,7 @@ You can use this command to build war package
 ```
 mvn clean install
 ```
-Then use the this output war file to deploy
+Then use this output war file to deploy
 
 ```
 target/restful-todo-0.1.war 
